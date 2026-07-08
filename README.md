@@ -31,7 +31,8 @@ The workflow includes data preprocessing, exploratory analysis, class balancing 
 ---
 
 ## 📂 Dataset
-Link:https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud
+*Link:https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud
+
 The project uses the **Credit Card Fraud Detection Dataset**, which contains anonymized credit card transactions.
 
 **Dataset Features**
