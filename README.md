@@ -1,60 +1,88 @@
-# 💳 Credit Card Fraud Detection using Machine Learning
+# 💳 Credit Card Fraud Detection
 
-A machine learning project that detects fraudulent credit card transactions using **Logistic Regression**. The project handles the highly imbalanced nature of fraud detection by applying **undersampling** and evaluates the model using multiple classification metrics.
+A machine learning project that detects fraudulent credit card transactions using **Logistic Regression**. The project addresses the challenge of **highly imbalanced data** through undersampling and evaluates model performance using multiple classification metrics.
 
 ---
 
 ## 📌 Project Overview
 
-Credit card fraud has become a significant challenge in the financial industry. This project builds a binary classification model capable of distinguishing between legitimate and fraudulent transactions using historical transaction data.
+Credit card fraud detection is a critical application of machine learning in the financial industry. This project analyzes **284,807 real-world credit card transactions** to classify transactions as **legitimate** or **fraudulent**.
 
-The workflow includes data preprocessing, exploratory analysis, class balancing through undersampling, feature scaling, model training, and performance evaluation.
+The workflow covers the complete machine learning pipeline, including:
+
+- Data preprocessing
+- Exploratory Data Analysis (EDA)
+- Handling class imbalance using undersampling
+- Feature scaling
+- Model training
+- Model evaluation
 
 ---
 
-## 🚀 Features
+## 🚀 Key Features
 
-* 📊 Performs exploratory data analysis (EDA)
-* 🔍 Detects missing values and analyzes dataset structure
-* ⚖️ Handles class imbalance using **Random Undersampling**
-* 📈 Standardizes numerical features using `StandardScaler`
-* 🤖 Trains a **Logistic Regression** classification model
-* 📉 Evaluates performance using:
-
-  * Accuracy
-  * Precision
-  * Recall
-  * F1-Score
-  * Confusion Matrix
-  * Classification Report
+- 📊 Performed Exploratory Data Analysis (EDA)
+- 🧹 Preprocessed and cleaned transaction data
+- ⚖️ Addressed class imbalance using Random Undersampling
+- 📈 Applied feature scaling with StandardScaler
+- 🤖 Built a Logistic Regression classification model
+- 📉 Evaluated model performance using multiple classification metrics
 
 ---
 
 ## 📂 Dataset
-*Link:https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud
 
-The project uses the **Credit Card Fraud Detection Dataset**, which contains anonymized credit card transactions.
+**Dataset:** Credit Card Fraud Detection Dataset
 
-**Dataset Features**
+🔗 https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud
 
-* Time
-* Amount
-* V1 – V28 (PCA-transformed features)
-* Class
+### Dataset Summary
 
-  * `0` → Legitimate Transaction
-  * `1` → Fraudulent Transaction
+| Feature | Description |
+|----------|-------------|
+| Transactions | **284,807** |
+| Fraud Cases | **492** |
+| Features | Time, Amount, V1–V28 |
+| Target | Class (0 = Legitimate, 1 = Fraud) |
 
-> Due to the highly imbalanced dataset, random undersampling is performed before training the model.
+The dataset is highly imbalanced, making fraud detection a challenging binary classification problem.
 
 ---
 
-## 🛠️ Technologies Used
+## 🛠️ Tech Stack
 
-* Python
-* Pandas
-* NumPy
-* Scikit-learn
+- Python
+- NumPy
+- Pandas
+- Scikit-learn
+- Jupyter Notebook
+
+---
+
+## 🔄 Machine Learning Workflow
+
+1. Load and explore the dataset
+2. Perform Exploratory Data Analysis (EDA)
+3. Handle missing values and inspect data distribution
+4. Balance the dataset using Random Undersampling
+5. Split data into training and testing sets
+6. Scale numerical features
+7. Train a Logistic Regression model
+8. Evaluate model performance
+
+---
+
+## 📊 Model Performance
+
+| Metric | Score |
+|---------|-------|
+| Test Accuracy | **94.4%** |
+| Precision | **98.9%** |
+| Recall | **89.8%** |
+| F1-Score | **94.1%** |
+
+These metrics demonstrate reliable fraud detection while maintaining high precision on an imbalanced dataset.
+
 ---
 
 ## 📁 Project Structure
@@ -62,61 +90,34 @@ The project uses the **Credit Card Fraud Detection Dataset**, which contains ano
 ```text
 Credit-Card-Fraud-Detection/
 │
-├── fraud-detection.ipynb      # Complete ML workflow            
+├── fraud-detection.ipynb
 ├── README.md
 └── requirements.txt
 ```
 
 ---
 
-## 🔬 Machine Learning Pipeline
-
-1. Load the dataset
-2. Explore the dataset
-3. Check missing values
-4. Analyze fraud vs legitimate transactions
-5. Balance the dataset using undersampling
-6. Split data into training and testing sets
-7. Standardize features
-8. Train a Logistic Regression model
-9. Evaluate the model using multiple metrics
-
----
-
-## 📊 Evaluation Metrics
-
-The model is evaluated using:
-
-* Accuracy Score
-* Precision
-* Recall
-* F1 Score
-* Confusion Matrix
-* Classification Report
-
-These metrics provide a better understanding of model performance, especially for imbalanced datasets.
-
----
-
-## 📚 Libraries Used
-
-```python
-numpy
-pandas
-scikit-learn
-```
-
----
-
 ## 🎯 Future Improvements
 
-* Train advanced models such as:
-  * Random Forest
-  * XGBoost
-  * LightGBM
-* Apply SMOTE instead of random undersampling
-* Perform hyperparameter tuning
-* Deploy the model using Streamlit or Flask
-* Compare multiple machine learning algorithms
+- Implement SMOTE for advanced class balancing
+- Compare multiple classification algorithms (Random Forest, XGBoost, LightGBM)
+- Perform hyperparameter tuning
+- Deploy the model using Streamlit
+- Build an interactive dashboard for fraud analysis
 
 ---
+
+## ⭐ Key Skills Demonstrated
+
+- Machine Learning
+- Fraud Detection
+- Exploratory Data Analysis (EDA)
+- Data Preprocessing
+- Handling Imbalanced Data
+- Feature Scaling
+- Classification
+- Model Evaluation
+- Python
+- NumPy
+- Pandas
+- Scikit-learn
