@@ -19,6 +19,26 @@ The workflow covers the complete machine learning pipeline, including:
 
 ---
 
+## 🎯 Why Recall Matters
+
+Fraud detection is a highly imbalanced classification problem, making **accuracy** less reliable as the primary metric.
+
+A **False Negative** means:
+
+> Actual fraud → Predicted as legitimate
+
+Since missing fraudulent transactions can lead to financial loss, **Recall is prioritized**, while Precision and F1-Score are also considered to control false positives.
+
+Key metrics:
+
+- **Recall** – Detect as many fraud cases as possible
+- **Precision** – Reduce false fraud alerts
+- **F1-Score** – Balance Precision and Recall
+- **PR-AUC** – Evaluate performance under class imbalance
+- **ROC-AUC** – Measure overall class discrimination
+
+---
+
 ## 🚀 Key Features
 
 - 📊 Performed Exploratory Data Analysis (EDA)
@@ -38,12 +58,17 @@ The workflow covers the complete machine learning pipeline, including:
 
 ### Dataset Summary
 
-| Feature | Description |
-|----------|-------------|
-| Transactions | **284,807** |
-| Fraud Cases | **492** |
+| Feature | Value |
+|---|---:|
+| Total Transactions | 284,807 |
+| Legitimate | 284,315 |
+| Fraudulent | 492 |
+| Fraud Rate | ~0.17% |
 | Features | Time, Amount, V1–V28 |
-| Target | Class (0 = Legitimate, 1 = Fraud) |
+| Target | Class |
+
+`Class = 0` → Legitimate  
+`Class = 1` → Fraudulent
 
 The dataset is highly imbalanced, making fraud detection a challenging binary classification problem.
 
@@ -74,6 +99,8 @@ The dataset is highly imbalanced, making fraud detection a challenging binary cl
 
 ## 📊 Model Performance
 
+The initial Logistic Regression model using Random Undersampling achieved:
+
 | Metric | Score |
 |---------|-------|
 | Test Accuracy | **94.4%** |
@@ -81,7 +108,7 @@ The dataset is highly imbalanced, making fraud detection a challenging binary cl
 | Recall | **89.8%** |
 | F1-Score | **94.1%** |
 
-These metrics demonstrate reliable fraud detection while maintaining high precision on an imbalanced dataset.
+> **Note:** These baseline results were obtained after undersampling and should not be considered representative of the original 0.17% fraud distribution. The improved version will use a more realistic evaluation strategy.
 
 ---
 
@@ -90,34 +117,31 @@ These metrics demonstrate reliable fraud detection while maintaining high precis
 ```text
 Credit-Card-Fraud-Detection/
 │
-├── fraud-detection.ipynb
+├── fraud-detection-using-regression-model.ipynb
 ├── README.md
 └── requirements.txt
 ```
 
 ---
 
-## 🎯 Future Improvements
+## 🚀 Future Improvements
 
-- Implement SMOTE for advanced class balancing
-- Compare multiple classification algorithms (Random Forest, XGBoost, LightGBM)
-- Perform hyperparameter tuning
-- Deploy the model using Streamlit
-- Build an interactive dashboard for fraud analysis
+- [ ] Compare Logistic Regression, Random Forest, XGBoost and LightGBM
+- [ ] Apply SMOTE and class-weighted approaches
+- [ ] Use stratified train/test evaluation with training-only resampling
+- [ ] Add Stratified K-Fold Cross-Validation
+- [ ] Perform hyperparameter tuning
+- [ ] Add PR-AUC and ROC-AUC analysis
+- [ ] Optimize classification threshold for higher fraud recall
+- [ ] Add feature importance and SHAP explainability
+- [ ] Build a Streamlit fraud detection application
+- [ ] Deploy the final model
 
 ---
 
-## ⭐ Key Skills Demonstrated
+## ⭐ Skills Demonstrated
 
-- Machine Learning
-- Fraud Detection
-- Exploratory Data Analysis (EDA)
-- Data Preprocessing
-- Handling Imbalanced Data
-- Feature Scaling
-- Classification
-- Model Evaluation
-- Python
-- NumPy
+**Machine Learning • Fraud Detection • EDA • Imbalanced Classification • Data Preprocessing • Logistic Regression • Model Evaluation • Precision • Recall • F1-Score • Python • Pandas • NumPy • Scikit-learn**
+
 - Pandas
 - Scikit-learn
