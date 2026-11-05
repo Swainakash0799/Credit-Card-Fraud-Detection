@@ -126,22 +126,15 @@ Credit-Card-Fraud-Detection/
 
 ## 🚀 Future Improvements
 
-- [ ] Compare Logistic Regression, Random Forest, XGBoost and LightGBM
+- [ ] Compare Logistic Regression, Random Forest, XGBoost 
 - [ ] Apply SMOTE and class-weighted approaches
 - [ ] Use stratified train/test evaluation with training-only resampling
 - [ ] Add Stratified K-Fold Cross-Validation
 - [ ] Perform hyperparameter tuning
-- [ ] Add PR-AUC and ROC-AUC analysis
 - [ ] Optimize classification threshold for higher fraud recall
-- [ ] Add feature importance and SHAP explainability
-- [ ] Build a Streamlit fraud detection application
-- [ ] Deploy the final model
 
 ---
 
 ## ⭐ Skills Demonstrated
 
-**Machine Learning • Fraud Detection • EDA • Imbalanced Classification • Data Preprocessing • Logistic Regression • Model Evaluation • Precision • Recall • F1-Score • Python • Pandas • NumPy • Scikit-learn**
-
-- Pandas
-- Scikit-learn
+**Machine Learning • Fraud Detection • EDA • Imbalanced Classification • Data Preprocessing • Logistic Regression • Model Evaluation • Precision • Recall • F1-Score • Python • Pandas • NumPy • Scikit-learn** 
